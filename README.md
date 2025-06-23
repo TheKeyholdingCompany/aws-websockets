@@ -3,12 +3,19 @@
 This is a websockets project written in Terraform and Python.
 Your websocket client can connect, subscribe to a topic and receive messages sent to that topic.
 
+## Prerequisites
+* Terraform is installed
+* You have logged onto AWS using the `aws sso login`
+
 ## Installation
 
 1. Clone the repository
-2. Navigate to the `/terraform` directory
-3. Run `terraform init`
-4. Run `terraform apply`
+2. Navigate to the root of this repository
+3. Run `./package_redis.sh` to package the Redis module for our lambda functions 
+4. Navigate to the `/terraform` directory
+5. Run `terraform init`
+6. Run `terraform workspace select <env>` where env is one of `testing`, `staging`, or `production`. 
+7. Run `terraform apply --var-file=<env>.tfvars`
 
 ## Usage
 

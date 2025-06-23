@@ -24,7 +24,7 @@ resource "aws_lambda_function" "lambda" {
   environment {
     variables = {
       API_GW_ID            = var.api_gw_id
-      API_GW_STAGE_NAME    = var.api_gw_stage_name
+      API_GW_STAGE_NAME    = "${var.api_gw_stage_name}-${terraform.workspace}"
       ELASTICACHE_ENDPOINT = var.elasticache_endpoint
       LOG_LEVEL            = var.config_log_level
     }
