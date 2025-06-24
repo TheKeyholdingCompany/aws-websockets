@@ -31,3 +31,4 @@ TODO
 - [x] Storage: change dynamoDB to cache e.g. elastic cache
 - [x] PING/PONG request/response to prevent client connection timeout
 - [x] Redis connection pooling
+- [ ] Create Github action workflow to do current manual task of packaging redis and deploying architecture through terraform
