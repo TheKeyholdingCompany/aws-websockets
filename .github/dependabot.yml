@@ -1,0 +1,34 @@
+version: 2
+updates:
+  - package-ecosystem: "terraform"
+    directory: "/terraform"
+    schedule:
+      interval: "weekly"
+    groups:
+      terraform-deps:
+        patterns: ["*"]
+        update-types: ["patch", "minor", "major"]
+    cooldown:
+      default-days: 3
+
+  - package-ecosystem: "terraform"
+    directory: "/terraform/lambda_authorizer"
+    schedule:
+      interval: "weekly"
+    groups:
+      terraform-deps:
+        patterns: ["*"]
+        update-types: ["patch", "minor", "major"]
+    cooldown:
+      default-days: 3
+
+  - package-ecosystem: "terraform"
+    directory: "/terraform/lambda_routes"
+    schedule:
+      interval: "weekly"
+    groups:
+      terraform-deps:
+        patterns: ["*"]
+        update-types: ["patch", "minor", "major"]
+    cooldown:
+      default-days: 3
